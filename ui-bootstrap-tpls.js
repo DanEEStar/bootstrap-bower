@@ -1499,7 +1499,7 @@ function ($compile, $parse, $document, $position, dateFilter, dateParser, datepi
           ngModel.$setValidity('date', true);
           return viewValue;
         } else if (angular.isString(viewValue)) {
-          var date = dateParser.parse(viewValue, dateFormat) || new Date(viewValue);
+          var date = dateParser.parse(viewValue, dateFormat) || dateParser.parse(viewValue, 'yyyy-MM-dd.*');
           if (isNaN(date)) {
             ngModel.$setValidity('date', false);
             return undefined;
