@@ -756,6 +756,9 @@ angular.module('ui.bootstrap.dateparser', [])
     },
     'EEE': {
       regex: $locale.DATETIME_FORMATS.SHORTDAY.join('|')
+    },
+    '.': {
+      regex: '\\.'
     }
   };
 
